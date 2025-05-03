@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ELENJI HRS - Luxury Hotels, Resorts & Spa</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Enhanced Slideshow Styles with Smooth Transitions -->
+    <style>
+        /* Background Slideshow Styles */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            /* Remove the existing background */
+            background: none;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 2s ease, transform 8s ease;
+            background-attachment: fixed; /* Keep parallax effect */
+        }
+
+        .hero-background.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7));
+            z-index: 0;
+        }
+
+        /* Fix for mobile devices that don't support background-attachment: fixed */
+        @media (max-width: 768px) {
+            .hero-background {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#1e293b">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo-container" onclick="window.location.href='index.html'">
+                <div class="logo-icon"><i class="fas fa-hotel"></i></div>
+                <div class="logo">ELENJI<span>HRS</span></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="property1.html" class="property-nav-link">Elenji Merry Woods Resort</a></li>
+                <li><a href="property2.html" class="property-nav-link">Elenji Dream Villa Homestay</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            
+        </nav>
+        <div class="hero-content">
+            <h1>Luxury Redefined</h1>
+            <p class="subtitle">Experience exceptional hospitality in our world-class hotels and resorts</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Discover More</a>
+                <a href="#properties" class="btn btn-outline-light">Our Properties</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About ELENJI</h2>
+            <div class="about-content">
+                <p>ELENJI HRS is a premier collection of luxury retreats, with our flagship properties nestled among the misty highlands of Kerala. Founded in 1990, we have established ourselves as the embodiment of refined elegance and authentic hospitality in one of India's most breathtaking landscapes.</p>
+                <p>Our flagship property seamlessly blends contemporary luxury with the rich cultural heritage of Kerala, offering guests a sanctuary where verdant tea plantations meet cloud-kissed mountains. Each properties are thoughtfully designed to frame the region's natural splendor while providing world-class comfort and personalized service.</p>
+                <p>At ELENJI HRS , we invite guests to experience the enchantment of the Western Ghats , elegent wild life and nature where luxury meets the unspoiled beauty of Kerala's emerald highlands.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hotel"></i></div>
+                    <h3>Luxury Accommodations</h3>
+                    <p>Exquisitely designed rooms and suites with premium amenities for the ultimate comfort.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Camp Fire</h3>
+                    <p>Soak in nature's embrace while toasting marshmallows under star-studded skies at our wilderness retreats.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-swimming-pool"></i></div>
+                    <h3>Resort Activities</h3>
+                    <p>From water sports to cultural excursions, we offer memorable experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('moutainviewsuite.jpg');">
+                    <div class="gallery-overlay">
+                        <h3>Mountain View Suite</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('pool.jpg');">
+                    <div class="gallery-overlay">
+                        <h3>Swimming Pool</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('campfire.jpg');">
+                    <div class="gallery-overlay">
+                        <h3>Camp Fire</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('adventure.jpg');">
+                    <div class="gallery-overlay">
+                        <h3>Adventure Services</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Properties</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image" style="background-image: url('2.jpg');"></div>
+                    <div class="property-content">
+                        <h3>ELENJI MARRY WOODS RESORT</h3>
+                        <p>Nestled amid misty tea plantations and verdant mountains, our Munnar resort offers serene luxury with panoramic valley views and rejuvenating Ayurvedic amenities.</p>
+                        <a href="property1.html" class="btn btn-primary">Explore Property</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image" style="background-image: url('homestay.jpg');"></div>
+                    <div class="property-content">
+                        <h3>ELENJI DREAM VILLA HOMESTAY</h3>
+                        <p>A charming family-run Munnar homestay nestled among cardamom gardens, offering authentic Kerala cuisine and personalized treks through misty tea estates.</p>
+                        <a href="property2.html" class="btn btn-primary">Explore Property</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Email:</strong> elenjihrs@gmail.com</p>
+                    <p><strong>Phone:</strong> +91 9744252527</p>
+                    <p><strong>Headquarters:</strong> ELENJI HRS , Elenji Building, Kumily post , Thekkady , Kerala , 685509</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/elenjihrs/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Us</h4>
+                    <p>For reservations and inquiries</p>
+                    <a href="mailto:elenjihrs@gmail.com">elenjihrs@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Call Us</h4>
+                    <p>Speak directly with our team</p>
+                    <a href="tel:+91 9744252527">+91 9744252527</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp Us</h4>
+                    <p>Chat with our team instantly</p>
+                    <a href="https://wa.me/919744252527">Connect on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-container" onclick="window.location.href='index.html'">
+                    <div class="footer-logo-icon"><i class="fas fa-hotel"></i></div>
+                    <div class="footer-logo">ELENJI<span>HRS</span></div>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 ELENJI Hotels, Resorts & Spa. All rights reserved.</p>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Enhanced Slideshow Script with Smooth Transitions -->
+    <script>
+    // Enhanced Background Slideshow with Smooth Transitions
+    document.addEventListener('DOMContentLoaded', function() {
+        // Array of background images for the slideshow
+        const backgroundImages = [
+            'url("2.jpg")',  // Your current background image
+            'url("3.jpg")',
+            'url("2.jpg")',
+            'url("3.jpg")',
+            'url("2.jpg")'
+            // Add or update your image paths here
+        ];
+        
+        // Get the hero element
+        const hero = document.querySelector('.hero');
+        
+        // Create background elements for all images at the start
+        const backgrounds = [];
+        
+        // Create all backgrounds initially
+        backgroundImages.forEach((imageUrl, index) => {
+            const background = document.createElement('div');
+            background.classList.add('hero-background');
+            background.style.backgroundImage = imageUrl;
+            background.style.zIndex = -10 - index; // Stack backgrounds
+            
+            hero.prepend(background);
+            backgrounds.push(background);
+        });
+        
+        // Set the first image as active
+        let currentIndex = 0;
+        backgrounds[currentIndex].classList.add('active');
+        
+        // Function to change the active background
+        function changeBackground() {
+            // Remove active class from current background
+            backgrounds[currentIndex].classList.remove('active');
+            
+            // Increment index and loop back if needed
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+            
+            // Add active class to new background
+            backgrounds[currentIndex].classList.add('active');
+        }
+        
+        // Change background every 7 seconds
+        setInterval(changeBackground, 7000);
+    });
+    </script>
+</body>
+</html>
