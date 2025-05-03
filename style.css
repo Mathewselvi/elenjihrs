@@ -257,6 +257,7 @@ img {
 }
 
 .logo span {
+    font-size: 1.5rem;
     color: var(--accent-color);
     transition: var(--transition);
 }
